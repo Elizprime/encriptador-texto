@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8abde6;
+    font-size: 20px;
+  }
+  
+.main{
+  display: flex;
+  width: 85%;
+  margin-left: 10%;
+  margin-right: 5%;
+}
+
+.imagen{  
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: fit-content;  
+}
+
+div img{
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.texto{
+  flex: 5;
+  margin-top: 6em;
+  display: flex;
+  flex-direction: column;    
+}
+
+.texto-introducido{
+  width: 90% ; /*ocupa el 90% del ancho de section*/
+  height: 25em;
+  margin: 0 auto; /*centra horizontalmente el textarea dentro de section*/  
+  resize: none; /* Desactiva el redimensionamiento del textarea */
+  background-color: #8abde6;  
+  border: none;
+}
+
+#letras{
+  font-size: 0.6em;
+  margin-top: 0.2em;
+  margin-bottom: 0.3em;
+  padding: 0;
+  margin-left:1.9em;
+}
+
+.botones{
+  display: flex;  
+  justify-content: center;
+  align-items: center;  
+ 
+}
+
+.btnEncriptar, .btnDesencriptar{
+  width: 12em;
+  padding: 0.7em;
+  margin: 0.5em;
+  border-radius: 1em;
+}
+
+.mensaje{
+  flex: 2;
+  margin-top: 1em;    
+}
+
+.container {
+  position: relative;
+  width: 100%; /* Asegura que el contenedor tenga el ancho completo */
+  height: 26em;
+}
+
+.texto-encriptado {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; /*el tamaño total será el 100%, el relleno y el borde se ajustarán*/
+  border-radius: 1em;
+  resize: none; /* Desactiva el redimensionamiento del textarea */  
+  border: none;
+}
+
+.btnCopiar {
+  position: absolute;
+  bottom: 0.6em; /* Coloca el botón a 0.5em desde el borde inferior */
+  left: 50%; /* Centra horizontalmente el botón */
+  transform: translateX(-50%); /* Corrige el centrado horizontal */
+  width: 12em;
+  padding: 0.7em;
+  margin: 0.5em;
+  border-radius: 1em;
+}
+
+/* Media query para hacerlo responsivo */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+
+  #imagen{
+    width: 30%;
+    height: 30%;
+  }
+
+  .imagen,
+  .texto,
+  .mensaje {
+    width: 90%;
+    margin: 0;
+  } 
+
+  .texto-introducido,
+  .texto-encriptado {
+    width: 100%;
+    height: 15em;
+    box-sizing: border-box; /* Agregamos esta propiedad para incluir el padding en el cálculo del tamaño */
+    padding: 1em; /* Agregamos padding para que el texto no esté pegado al borde */
+  }
+
+  #letras {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .botones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btnEncriptar,
+  .btnDesencriptar {
+    width: 80%;
+    margin-top: 0.5em; /* Espacio entre los botones */
+  }
+
+  .mensaje {
+    position: relative; /* Asegura que el contenedor sea relativo */
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Cambiamos la altura a auto para que se ajuste al contenido */
+    margin-top: 1em; /* Espacio entre el textarea y el botón */
+  }
+
+  .btnCopiar {
+    position: absolute;
+    bottom: 0.5em; /* Coloca el botón a 0.5em desde el borde inferior */
+    left: 50%; /* Centra horizontalmente el botón */
+    transform: translateX(-50%); /* Corrige el centrado horizontal */
+    width: 80%;
+    padding: 0.7em;
+    border-radius: 1em;
+  }
+}
+
+
